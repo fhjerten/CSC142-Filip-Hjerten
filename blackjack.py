@@ -15,7 +15,7 @@ def calculate_hand(hand): # Section for calculating hand values in blackjack.
         if card in ["J", "Q", "K"]:  # for face cards, value is 10.
             total += 10
 
-        # For Aces, counts them later.
+        # First case for aces, can either be 1 or 11, which will come later.
         elif card == "A":
             aces += 1
         else:
@@ -33,7 +33,7 @@ def calculate_hand(hand): # Section for calculating hand values in blackjack.
 
 
 def main():
-    # Shared deck of cards for both player and dealer hand. Only one deck used for this.
+    # Shared (one) deck of cards for both player and dealer hand. Only one deck used for this.
     deck = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
 
     player_hand = []
