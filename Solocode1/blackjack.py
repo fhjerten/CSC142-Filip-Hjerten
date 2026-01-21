@@ -86,8 +86,8 @@ def main():
     
     print("Dealer's total score:", calculate_hand(dealer_hand))
     print("Player's score:", calculate_hand(player_hand))
-    
-    # Determine winner.
+
+    # Determining winner.
     if calculate_hand(player_hand) > calculate_hand(dealer_hand):
         print("You win!")
     elif calculate_hand(player_hand) < calculate_hand(dealer_hand):
