@@ -89,9 +89,9 @@ def main():
 
     # Determining winner.
     if calculate_hand(player_hand) > calculate_hand(dealer_hand):
-        print("You win!")
+        print("you win!")
     elif calculate_hand(player_hand) < calculate_hand(dealer_hand):
-        print("Dealer wins!")
+        print("you lost!")
     else:
         print("It's a push, no one wins")
         
