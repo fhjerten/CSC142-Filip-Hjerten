@@ -59,6 +59,7 @@ def main():
         choice = input("Do you want to hit or stay? h for hit s for stay(h/s): ")
         if choice == 'h':
             draw_card(player_hand, deck)
+            print (player_hand)
             print ("Total score:", calculate_hand(player_hand))
 
             if calculate_hand(player_hand) > 21:
