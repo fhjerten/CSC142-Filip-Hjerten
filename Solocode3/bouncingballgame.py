@@ -111,7 +111,7 @@ while True:
     if not game_over:
         window.blit(ball_image, ballRect)
     else:
-        draw_text(        # showing all this when the game is over and you win it.
+        draw_text( # showing all this when the game is over and you win it.
             window,
             f"Game finished in {total_time:.2f} seconds!",  # .2f gives the total time 2 decimals to it.
             center = True,
