@@ -1,6 +1,6 @@
 import sys
 import os
-sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.dirname(__file__))  #doing this so i only use pygwidgets from the folder    
 
 import pygame
 import pygwidgets
@@ -19,7 +19,7 @@ pygame.display.set_caption("Temperature Converter Assignment")
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
-# Creates a textinput widget here
+# Putting in the temperature input here
 temperatureInput = pygwidgets.InputText(window, (50, 50), width = 150,)
 
 # Create the radio buttons here
@@ -32,7 +32,7 @@ celsiusRadio = pygwidgets.TextRadioButton( window, (50, 140), 1, "Convert to Cel
 # The convert button
 convertButton = pygwidgets.TextButton( window, (50, 180), "Convert")
 
-# Creates DisplayText for result
+# Text that shows the results
 resultDisplay = pygwidgets.DisplayText( window, (50, 230), "Result here:", fontSize = 24)
 
 
@@ -49,21 +49,21 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-        # For button clicks here
+        # if convert button is clicked on
         if convertButton.handleEvent(event):
             try:
-                temp = float(temperatureInput.getValue())
+                temp = float(temperatureInput.getValue()) # getting number
 
-                if fahrenheitRadio.getValue():
+                if fahrenheitRadio.getValue(): #if fahrenheit selected
                     result = temp * 9/5 + 32
                     resultDisplay.setValue(f"{result:.2f} degrees Fahrenheit")
 
-                else:
+                else:  # if celsius is selected
                     result = (temp - 32) / (9/5)
                     resultDisplay.setValue(f"{result:.2f} degrees Celsius")
 
             except:
-                resultDisplay.setValue("Invalid input")
+                resultDisplay.setValue("Invalid input")  # if not a number was put in
 
     #Drawing the whole window
     window.fill(WHITE)
