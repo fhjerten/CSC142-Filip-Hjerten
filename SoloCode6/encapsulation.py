@@ -25,6 +25,7 @@ train = Vehicle("Train", 200, 5.0, 15)  # medium efficiency
 plane = Vehicle("Plane", 5000, 6.0, 0.2)  # very large fuel, very low mpg
 
 
+
 # put all vehicles in a list
 vehicles = [car, bus, train, plane]
 
